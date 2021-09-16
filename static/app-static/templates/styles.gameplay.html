@@ -1,0 +1,44 @@
+<div>
+    <style>
+        /*.letters-list-bottom {
+            margin-left: {{ styles.proposed_button_list_margin }}px !important;
+            margin-right: {{ styles.proposed_button_list_margin }}px !important;
+        }
+        .letters-list-bottom li {
+            height: {{ styles.proposed_button_size }}px !important;
+            display: block;
+        }
+        .letters-list-bottom li proposed-char {
+            display: block;
+            margin-right: {{ styles.proposed_button_margin }}px !important;
+        }
+        .letters-list-bottom li button {
+            width: {{ styles.proposed_button_size }}px !important;
+            height: {{ styles.proposed_button_size }}px !important;
+            font-size: {{ styles.proposed_button_font_size }}px !important;
+            line-height: {{ styles.proposed_button_size }}px !important;
+            text-align: center;
+            display: inline-block;
+        }
+        .letters-list-bottom li.last-button proposed-char {
+            margin-right: 0 !important;
+        }
+        .letters-list-bottom.first {
+            margin-bottom: {{ styles.proposed_button_margin }}px !important;
+        }*/
+
+        .letters-list li {
+            width: {{ styles.guessed_stroke_width }}px !important;
+            margin: 0 !important;
+            margin-right: {{ styles.guessed_stroke_margin }}px !important;
+            font-size: {{ styles.guessed_button_font_size }}px !important;
+            /*line-height: {{ styles.guessed_button_line_height }}px !important;*/
+        }
+        .letters-list li:last-child {
+            margin-right: 0 !important;
+        }
+        .letters-list li.whitespace-breakpoint {
+            margin-right: {{ styles.guessed_stroke_whitespace }}px !important;
+        }
+    </style>
+</div>
