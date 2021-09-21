@@ -8,11 +8,17 @@
         <h2 class="text-center text-white" ng-bind="welldone_level.answer_orig"></h2>
         <div class="text-center buttons-price__wrapper" ng-if="!app_config.context">
             <a href="#" class="btn price">
-                <img src="/app-static/images/coins.png" alt="">
+                <span class="coins-img">
+                    
+                </span>
+                
                 +<span ng-bind="app_config.coins_on_passed_level"></span>
             </a>
             <a href="#" class="btn price">
-                <img src="/app-static/static/crystals/img/cryistal.svg" alt="">
+                <span class="complete-cristal-icon">
+                    
+                </span>
+               
                 +<span ng-bind="app_config.crystals_on_passed_level"></span>
             </a>
         </div>

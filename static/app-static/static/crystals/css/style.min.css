@@ -986,6 +986,28 @@ html.ngdialog-open, body.ngdialog-open {
     background-size: 100%;
     background-position: center;
 }
+.coins-img {
+    width: 15px;
+    height: 11.83px;
+    display: block;
+    background: url('/app-static/images/coins.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px 11.83px;
+    margin-right: 5px;
+
+}
+
+.complete-cristal-icon {
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: url('/app-static/static/crystals/img/cryistal.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    margin-right: 5px;
+}
 @media (max-width: 568px) {
     .ngdialog.ngdialog-theme-default .ngdialog-button: focus {
     -webkit-animation: none;
