@@ -3,7 +3,7 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
-                    <img src="/app-static/static/crystals/img/back.svg" alt="">Recent payments
+                    <span class="cryistals__search-wrapper-arrow"></span>Recent payments
                 </a>
             </div>
 
@@ -17,7 +17,9 @@
                 <div class="leaderboard-items" when-scrolled="load_more()" scroll-listen=".cryistals-wrapper">
                     <div ng-if="!rewards.length" class="no-payouts">
                         <div>
-                            <img src="/app-static/static/crystals/img/icn_money.svg" alt="">
+                           <div class="payouts-history-icon">
+                            
+                        </div>
                             <div class="no-payouts-title">
                                 No Payouts Yet!
                             </div>
@@ -59,7 +61,9 @@
                                         </div>
                                         <div class="recent-payments__text">
                                             <span ng-bind="(r.amount|currency:'':4)"></span>
-                                            <img src="/app-static/static/crystals/img/ton.png" alt="">≈&nbsp;
+
+                                            <div class="ton-icon"></div>
+                                            ≈&nbsp;
                                             <span ng-bind="((r.amount * r.rate)|currency:'$':2)"></span>
                                         </div>
                                     </div>

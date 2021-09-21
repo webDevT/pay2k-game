@@ -944,7 +944,48 @@ html.ngdialog-open, body.ngdialog-open {
                 -ms-flex-pack: center;
                 justify-content: center;
             }
-
+.cryistals-amount--yellow {
+    display: block;
+    width: 30px;
+    background: url('/app-static/static/crystals/img/cryistal.svg') center center no-repeat;
+    height: 24px; 
+}
+.cryistals-amount--blue {
+    display: block;
+    width: 30px;
+    background: url('/app-static/static/crystals/img/ton.png') center center no-repeat;
+    height: 24px;background-size: 25px;
+}
+.cryistals-win__img--money {
+    width: 98px;
+    height: 98px;
+    background: url('/app-static/static/crystals/img/money.svg') center center no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.cryistals-win__img--raffle {
+    width: 100px;
+    height: 100px;
+    background: url('/app-static/static/crystals/img/tickets.svg') center center no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.players-activity__img-leaderboard {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url('/app-static/static/crystals/img/medal.svg') center center no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.players-activity__img-recent-payouts {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url('/app-static/static/crystals/img/euro.svg') center center no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
 @media (max-width: 568px) {
     .ngdialog.ngdialog-theme-default .ngdialog-button: focus {
     -webkit-animation: none;
@@ -1164,7 +1205,7 @@ html.ngdialog-open, body.ngdialog-open {
 }
 .cryistals-amount {
     margin-left: 5px;
-    margin-left-background-size: 25px;
+    background-size: 25px;
 }
 .cryistals-win-content {
     display: -webkit-box;
@@ -1516,6 +1557,7 @@ html.ngdialog-open, body.ngdialog-open {
 }
 .cryistals__search-wrapper .cryistals__search-wrapper-arrow {
     margin-right: 8.7px;
+    display: block;
 }
 .cryistals-block--info {
     padding-right: 0;
@@ -1582,9 +1624,14 @@ html.ngdialog-open, body.ngdialog-open {
     text-decoration: none;
     height: 48px;
 }
-.share-btn {
+.share-btn-icon {
     width: 20px;
     height: 20px;
+    background: url('/app-static/static/crystals/img/share.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    display: block;
+    cursor: pointer;
 }
 .btn-clipboard--popup {
     -ms-flex-item-align: end;
@@ -1954,6 +2001,11 @@ header.ng-scope {
 }
 .invite-friends__img {
     margin-bottom: 12px;
+    width: 105px;
+    height: 98px;
+    background: url(/app-static/static/crystals/img/friend.svg);
+    background-size: 105px 98px;
+    background-repeat: no-repeat;
 }
 .invite-friends__text {
     max-width: 250px;
@@ -2963,6 +3015,10 @@ a.recent-payments__item--info-need.transactions-history__item {
     margin: 0 auto;
     margin-bottom: 10px;
     width: 35px;
+    height: 35px;
+    background: url('/app-static/static/crystals/img/succ.svg');
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
 }
 .cryistals-slide-item:not(:last-child) {
     margin-bottom: 16px;
@@ -3128,6 +3184,147 @@ a.recent-payments__item--info-need.transactions-history__item {
     padding-right: 14px;
     padding-top: 14px;
     padding-bottom: 14px;
+}
+
+/*start search modal style*/
+ .search-modal {
+                    opacity: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: visibility 0.15s, opacity 0.15s linear;
+                    display: block;
+                    padding: 24px 0px;
+                }
+
+                .search-modal.active {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .search-modal .close-modal {
+                    left: 12px;
+                }
+
+                .selectize-control {
+                    font-size: 0;
+                }
+
+                .selectize-input, .selectize-input.items.input-active, .selectize-input.items.focus {
+                    padding: 0 !important;
+                }
+
+                .selectize-input > input {
+                    height: 40px;
+                    padding: 0px 0px 0px 37px !important;
+                    font-size: 16px;
+                    width: 100%;
+                }
+
+                .selectize-dropdown.single {
+                    margin-top: 10px;
+                    /*border-radius: 5px !important;*/
+                }
+
+                .selectize-control.single .selectize-input input, .selectize-dropdown.single input {
+                    padding-left: 46px !important;
+                    width: 100% !important;
+                }
+
+                .selectize-dropdown, .selectize-dropdown.form-control {
+                    height: 60vh !important;
+                }
+
+                .selectize-dropdown-content {
+                    max-height: 100% !important;
+                    height: 100% !important;
+                }
+/*end search modal style*/
+.filter-icon i {
+    color: #fff;
+    font-size: 19px;
+}
+.ton-icon {
+    width: 20px;
+    height: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: url('/app-static/static/crystals/img/ton.png');
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 16px;
+}
+.menu-button {
+    width: 5px;
+    height: 18px;
+    cursor: pointer;
+    background: url('/app-static/static/crystals/img/menu-btn.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.payouts-history-icon {
+    width: 180px;
+    height: 180px;
+    background: url('/app-static/static/crystals/img/icn_money.svg');
+    background-repeat: no-repeat;
+    background-size: 180px 180px;
+
+}
+.cryistals-amount--ton {
+    vertical-align: middle;
+    width: 20px;
+    background: url(/app-static/static/crystals/img/ton.png) center center no-repeat;
+    height: 16px;
+    display: inline-block;
+    background-size: 100%;
+}
+.apply-filter {
+    overflow: hidden;
+    padding: 20px;"
+}
+.apply-filter label.filter-checkbox {
+    position: relative;
+}
+.apply-filter label.filter-checkbox input[type=checkbox] {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.apply-filter label.filter-checkbox.odd {
+    float: left;
+    width: 52%;
+}
+.apply-filter label.filter-checkbox.even {
+    float: left;
+    clear: right;
+    width: 48%;
+}
+.apply-filter label.filter-checkbox i:not(.fas) {
+    font-style: normal;
+    font-family: Roboto, sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+}
+.filter-checkbox--1 {
+    width: 48%;
+    display: block;
+    margin-left: 52%;
+    margin-bottom: 10px
+}
+.fas {
+    vertical-align: middle;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.overflow-hidden {
+   overflow: hidden; 
+}
+.apply-button {
+    margin-top: 20px;
 }
 @media only screen and (max-width: 992px) {
     .cryistals-wrapper {

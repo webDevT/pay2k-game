@@ -5,12 +5,13 @@
 	<div class="cryistals-container">
 		<div class="cryistals-header__top">
 			<a ng-click="exit_crystals_and_update_amount()" class="cryistals-back">
-				<img src="/app-static/static/crystals/img/back.svg" alt=""> My Gems
+				<span class="cryistals__search-wrapper-arrow"></span> My Gems
 			</a>
 
 			<div class="cryistals-header__menu" ng-class="{'active': dots_menu_active}" ng-click="dots_menu_active = !dots_menu_active;$event.stopPropagation();">
 				<div class="cryistals-header__menu-btn">
-					<img src="/app-static/static/crystals/img/menu-btn.svg" alt="">
+                    <div class="menu-button"></div>
+					
 				</div>
 				<div class="cryistals-header__menu-content">
 					<a ui-sref="crystals.transactions" class="cryistals-header__menu-item">Transaction History</a>
@@ -27,22 +28,12 @@
                     </a>
 
 					<a ui-sref="crystals.transactions" class="cryistals-amount-wrapper">
-						<span class="cryistals-amount ng-binding" style="
-    display: block;
-    width: 30px;
-    background: url('/app-static/static/crystals/img/cryistal.svg') center center no-repeat;
-    height: 24px;
-"></span>
+						<span class="cryistals-amount ng-binding cryistals-amount--yellow"></span>
                         <span class="cryistals-amount" ng-bind="app_config.crystals"></span>
 					</a>
 
                     <a ui-sref="crystals.rewards({all_users: false, profile: profile, from_state: 'index'})" class="cryistals-amount-wrapper">
-                        <span class="cryistals-amount ng-binding" style="
-    display: block;
-    width: 30px;
-    background: url('/app-static/static/crystals/img/ton.png') center center no-repeat;
-    height: 24px;background-size: 25px;
-"></span>
+                        <span class="cryistals-amount ng-binding cryistals-amount--blue"></span>
                         <span class="cryistals-amount" ng-bind="(app_config.tons|currency:'':4) + ' ≈ '"></span>
                         <!--<span class="cryistals-amount" ng-bind="(app_config.tons_usd|currency:'$':3)|limitTo:((app_config.tons_usd|currency:'$':3).length - 1)"></span>-->
                         <span class="cryistals-amount" ng-bind="(app_config.tons_usd|currency:'$':2)"></span>
@@ -113,8 +104,8 @@
                     </div>
                 </div>
 
-                <div class="cryistals-win__img">
-                    <img src="/app-static/static/crystals/img/money.svg" alt="">
+                <div class="cryistals-win__img cryistals-win__img--money">
+                   
                 </div>
             </div>
 
@@ -135,8 +126,8 @@
                     </div>
                 </div>
 
-                <div class="cryistals-win__img">
-                    <img src="/app-static/static/crystals/img/tickets.svg" alt="">
+                <div class="cryistals-win__img cryistals-win__img--raffle">
+                   
                 </div>
             </div>
 
@@ -301,7 +292,9 @@ centerMode: true}">-->
 
             <a ui-sref="crystals.leaderboard" class="players-activity__item">
 		<span class="players-activity__img-wrapper">
-			<img src="/app-static/static/crystals/img/medal.svg" alt="">
+            <span class="players-activity__img-leaderboard">
+                
+            </span>
 		</span>
                 <span class="players-activity__text">
 			Leaderboard
@@ -311,7 +304,10 @@ centerMode: true}">-->
 
             <a ui-sref="crystals.rewards({all_users: true})" class="players-activity__item">
             <span class="players-activity__img-wrapper">
-                <img src="/app-static/static/crystals/img/euro.svg" alt="">
+                 <span class="players-activity__img-recent-payouts">
+                
+            </span>
+              
             </span>
             <span class="players-activity__text">
                 Recent Payouts

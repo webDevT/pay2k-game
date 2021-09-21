@@ -5,8 +5,7 @@
                 <div class="cryistals__search-wrapper" ng-click="trigger_autocomplete()">
 
                     <a href="javascript://" ng-click="handle_back_arrow_on_autocomplete($event)">
-                        <img src="/app-static/static/crystals/img/back.svg" alt=""
-                             class="cryistals__search-wrapper-arrow">
+                       <span class="cryistals__search-wrapper-arrow"></span>
                     </a>
 
                     <div class="cryistals__search-container">
@@ -14,7 +13,7 @@
 
                         </div>
 
-                        <img src="/app-static/static/crystals/img/search.svg" alt="">
+                       <div class="search-icon"></div>
                     </div>
 
                 </div>
@@ -234,60 +233,7 @@
                             </div>
                         </div>
             <!-- end cristals block -->
-            <style>
-                .search-modal {
-                    opacity: 0;
-                    visibility: hidden;
-                    opacity: 0;
-                    transition: visibility 0.15s, opacity 0.15s linear;
-                    display: block;
-                    padding: 24px 0px;
-                }
-
-                .search-modal.active {
-                    display: block;
-                    opacity: 1;
-                    visibility: visible;
-                }
-
-                .search-modal .close-modal {
-                    left: 12px;
-                }
-
-                .selectize-control {
-                    font-size: 0;
-                }
-
-                .selectize-input, .selectize-input.items.input-active, .selectize-input.items.focus {
-                    padding: 0 !important;
-                }
-
-                .selectize-input > input {
-                    height: 40px;
-                    padding: 0px 0px 0px 37px !important;
-                    font-size: 16px;
-                    width: 100%;
-                }
-
-                .selectize-dropdown.single {
-                    margin-top: 10px;
-                    /*border-radius: 5px !important;*/
-                }
-
-                .selectize-control.single .selectize-input input, .selectize-dropdown.single input {
-                    padding-left: 46px !important;
-                    width: 100% !important;
-                }
-
-                .selectize-dropdown, .selectize-dropdown.form-control {
-                    height: 60vh !important;
-                }
-
-                .selectize-dropdown-content {
-                    max-height: 100% !important;
-                    height: 100% !important;
-                }
-            </style>
+           
             <div class="search-modal" ng-class="{'active': search_modal_active}">
                 <div class="game-serch-wrapper">
                     <div class="game-serch-wrapper-content">

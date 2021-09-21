@@ -1030,9 +1030,27 @@ h2.text-center.ng-scope {
    height: 45px;
    display: block;
    background: url("../static/crystals/img/revela-the-letter-white.png");
-   background-position: top center;
+   background-repeat: no-repeat;
+   background-position: left center;
    background-size: 45px 45px;
-
+}
+.cristals__orange-button .game-orange-button-icon--2 {
+   width: 45px;
+   height: 45px;
+   display: block;
+   background: url("../static/crystals/img/remove-letters-white.png");
+   background-repeat: no-repeat;
+   background-position: left center;
+   background-size: 37.5px 37.5px;
+}
+.cristals__orange-button .game-orange-button-icon--3 {
+   width: 45px;
+   height: 45px;
+   display: block;
+   background: url("../static/crystals/img/skip-the-level-white.png");
+   background-repeat: no-repeat;
+   background-position: left center;
+   background-size: 45px 45px;
 }
 /*.game-orange-button-icon--1 {
     background: url("../app-static/images/revela the letter white.png");

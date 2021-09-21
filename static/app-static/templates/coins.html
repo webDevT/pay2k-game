@@ -4,10 +4,14 @@
         <ul class="coins-list">
 
             <li ng-class="{'disabled2': app_config.user_vars.sharing_before2}">
-                <a ng-click="rewarded_videos()" class="coins-list-item"><img src="/app-static/images/coins.png" alt=""><span><strong ng-bind="'+'+app_config.hints.expose_char"></strong><span translate>watch_video</span></span></a>
+                <a ng-click="rewarded_videos()" class="coins-list-item">
+                    <img src="/app-static/images/coins.png" alt="">
+                    <span><strong ng-bind="'+'+app_config.hints.expose_char"></strong><span translate>watch_video</span></span></a>
             </li>
             <li ng-repeat="package in coins.iap_catalog|orderBy:'productID'">
-                <a ng-click="buy_coins_package(package)" class="coins-list-item"><img src="/app-static/images/coins.png" alt=""><span><strong ng-bind="'+'+package.title"></strong><span translate>buy_coins</span><span ng-bind="' ('+package.price+')'"></span></span></a>
+                <a ng-click="buy_coins_package(package)" class="coins-list-item">
+                    <img src="/app-static/images/coins.png" alt="">
+                    <span><strong ng-bind="'+'+package.title"></strong><span translate>buy_coins</span><span ng-bind="' ('+package.price+')'"></span></span></a>
             </li>
         </ul>
     </div>

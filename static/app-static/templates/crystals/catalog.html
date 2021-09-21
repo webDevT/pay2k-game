@@ -3,10 +3,10 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.play_earn" class="cryistals-back">
-                    <img src="/app-static/static/crystals/img/back.svg" alt="">
+                 <span class="cryistals__search-wrapper-arrow"></span>
                     <text ng-bind="$resolve.$stateParams.preset?$resolve.$stateParams.source.toUpperCase():($resolve.$stateParams.search_results_title||'Search results')"></text>
                 </a>
-                <a href="javascript://" ng-click="set_filters()"><i style="color: #fff; font-size: 19px;" class="fas fa-filter"></i></a>
+                <a href="javascript://" ng-click="set_filters()" class="filter-icon"><i class="fas fa-filter "></i></a>
 
 
             </div>

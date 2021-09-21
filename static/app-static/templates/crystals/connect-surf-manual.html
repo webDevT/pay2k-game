@@ -4,10 +4,10 @@
             <div class="cryistals-header__top">
                 <a ng-if="from_state != 'index'"
                    ui-sref="crystals.rewards({page: null, all_users: false, profile: profile})" class="cryistals-back">
-                    <img src="/app-static/static/crystals/img/back.svg" alt="">Connect Wallet
+                    <span class="cryistals__search-wrapper-arrow"></span>Connect Wallet
                 </a>
                 <a ng-if="from_state == 'index'" ui-sref="crystals.index({silent: true})" class="cryistals-back">
-                    <img src="/app-static/static/crystals/img/back.svg" alt="">Connect Wallet
+                     <span class="cryistals__search-wrapper-arrow"></span>Connect Wallet
                 </a>
 
 
@@ -21,7 +21,6 @@
 
 
     <section class="cryistals-profile">
-
         <div class="cryistals-container">
             <div class="cash-out-title cash-out-title--wallet">
                 All payments will be processed <br>
