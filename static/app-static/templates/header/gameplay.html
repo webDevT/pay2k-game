@@ -29,17 +29,15 @@
 </svg>
 </div>
         </div>
-      
-
-
-
+    
         <div class="top-btns-group">
 
             <a class="btn btn-secondary" ui-sref="crystals.index">
                 <span>
                    Gems 
                 </span>
- <img ng-if="app_config.crystals || app_config.crystals === 0" src="/app-static/static/crystals/img/cryistal.svg" alt="" class="cristal-icon">
+                <span class="cristal-icon"></span>
+<!--  <img ng-if="app_config.crystals || app_config.crystals === 0" src="/app-static/static/crystals/img/cryistal.svg" alt="" class="cristal-icon"> -->
                 <span ng-if="app_config.crystals || app_config.crystals === 0" ng-bind="app_config.crystals"></span>
                 
                 <span ng-if="!app_config.crystals && app_config.crystals !== 0" us-spinner="{radius:14, width:8, length: 12, lines: 14, color: $window.g_coins_button_text_color}"></span>
