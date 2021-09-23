@@ -18,7 +18,7 @@
                     <div ng-if="!rewards.length" class="no-payouts">
                         <div>
                            <div class="payouts-history-icon">
-                            
+
                         </div>
                             <div class="no-payouts-title">
                                 No Payouts Yet!
@@ -61,9 +61,7 @@
                                         </div>
                                         <div class="recent-payments__text">
                                             <span ng-bind="(r.amount|currency:'':4)"></span>
-
-                                            <div class="ton-icon"></div>
-                                            ≈&nbsp;
+                                            <div class="ton-icon"></div>≈&nbsp;
                                             <span ng-bind="((r.amount * r.rate)|currency:'$':2)"></span>
                                         </div>
                                     </div>

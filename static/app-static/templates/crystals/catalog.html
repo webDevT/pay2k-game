@@ -4,7 +4,8 @@
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.play_earn" class="cryistals-back">
                  <span class="cryistals__search-wrapper-arrow"></span>
-                    <text ng-bind="$resolve.$stateParams.preset?$resolve.$stateParams.source.toUpperCase():($resolve.$stateParams.search_results_title||'Search results')"></text>
+                    <text ng-bind="$resolve.$stateParams.search_results_title || $resolve.$stateParams.source.toUpperCase() ||'Search results'"></text>
+                    <!--<text ng-bind="$resolve.$stateParams.preset?$resolve.$stateParams.source.toUpperCase():($resolve.$stateParams.search_results_title||'Search results')"></text>-->
                 </a>
                 <a href="javascript://" ng-click="set_filters()" class="filter-icon"><i class="fas fa-filter "></i></a>
 

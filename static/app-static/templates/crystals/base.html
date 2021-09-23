@@ -11,7 +11,7 @@
 			<div class="cryistals-header__menu" ng-class="{'active': dots_menu_active}" ng-click="dots_menu_active = !dots_menu_active;$event.stopPropagation();">
 				<div class="cryistals-header__menu-btn">
                     <div class="menu-button"></div>
-					
+
 				</div>
 				<div class="cryistals-header__menu-content">
 					<a ui-sref="crystals.transactions" class="cryistals-header__menu-item">Transaction History</a>
@@ -32,12 +32,12 @@
                         <span class="cryistals-amount" ng-bind="app_config.crystals"></span>
 					</a>
 
-                    <a ui-sref="crystals.rewards({all_users: false, profile: profile, from_state: 'index'})" class="cryistals-amount-wrapper">
+                    <!--<a ui-sref="crystals.rewards({all_users: false, profile: profile, from_state: 'index'})" class="cryistals-amount-wrapper">
                         <span class="cryistals-amount ng-binding cryistals-amount--blue"></span>
                         <span class="cryistals-amount" ng-bind="(app_config.tons|currency:'':4) + ' ≈ '"></span>
-                        <!--<span class="cryistals-amount" ng-bind="(app_config.tons_usd|currency:'$':3)|limitTo:((app_config.tons_usd|currency:'$':3).length - 1)"></span>-->
+                        {# <!--<span class="cryistals-amount" ng-bind="(app_config.tons_usd|currency:'$':3)|limitTo:((app_config.tons_usd|currency:'$':3).length - 1)"></span>#}
                         <span class="cryistals-amount" ng-bind="(app_config.tons_usd|currency:'$':2)"></span>
-					</a>
+					</a>-->
 
 				</div>
 
@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="cryistals-win__img cryistals-win__img--money">
-                   
+
                 </div>
             </div>
 
@@ -127,19 +127,78 @@
                 </div>
 
                 <div class="cryistals-win__img cryistals-win__img--raffle">
-                   
+
                 </div>
             </div>
 
         </a>
     </div>
 
+<!-- start favorite game
+ -->
+
+  <div class="cryistals-container">
+        <a class="cryistals-block favorite-games">
+<span class="favorite-games__icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.62484 23.2707C4.84769 23.4319 5.1088 23.5139 5.37175 23.5139C5.59881 23.5139 5.82385 23.4527 6.02583 23.3328L12 19.7607L17.9742 23.3308C18.4102 23.5928 18.9623 23.5697 19.3763 23.2698C19.7912 22.9699 19.9853 22.4528 19.8722 21.9527L18.3282 15.1516L23.5644 10.5605C23.9493 10.2245 24.0955 9.69146 23.9374 9.20548C23.7794 8.71951 23.3495 8.37435 22.8393 8.32839L15.9122 7.6994L13.173 1.28817C12.9711 0.818306 12.5111 0.51416 12 0.51416C11.489 0.51416 11.029 0.818306 10.827 1.28927L8.08784 7.6994L1.15964 8.32839C0.650586 8.37545 0.22064 8.71951 0.0626143 9.20548C-0.095411 9.69237 0.0516276 10.2245 0.436528 10.5605L5.67279 15.1525L4.12879 21.9538C4.01581 22.4528 4.20973 22.9699 4.62484 23.2707Z" fill="white"/>
+</svg>
+
+
+
+</span>
+     <span class="cryistals__text cryistals__block-title">
+    Favorites   games
+</span>     
+
+        </a>
+    </div>
+
+<!-- end favorite game
+ -->
+
+ <div class="cryistals-container">
+        <div class="cryistals-block">
+
+            <div class="cryistals-block__header">
+                <a ui-sref="crystals.play_earn" class="cryistals__text cryistals__block-title">
+                    Recently played
+                </a>
+
+                <a ui-sref="crystals.play_earn" class="cryistals-more">
+                    <div class="cryistals-more__text">
+                        More
+                    </div>
+
+
+                </a>
+
+            </div>
+
+
+            <div class="cryistals-play-earn-items">
+                <a ng-repeat="app in play_n_earn" href="javascript://" class="cryistals-play-earn-item"
+                   ng-click="open_prelaunch_app_dialog(app)">
+        <span class="cryistals-play-earn__img">
+            <img ng-src="{{ app.icon }}" alt="{{ app.name }}" class="cryistals-play-earn__icon">
+        </span>
+
+                    <span class="cryistals-play-earn__title" ng-bind="app.name">
+        </span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+    </div>
 
     <div class="cryistals-container">
         <div class="cryistals-block">
 
             <div class="cryistals-block__header">
-                <a href="play-earn.html" class="cryistals__text cryistals__block-title">
+                <a ui-sref="crystals.play_earn" class="cryistals__text cryistals__block-title">
                     Play & Earn
                 </a>
 
@@ -215,11 +274,11 @@ centerMode: true}">-->
                         <div class="cryistals-slider__card cryistals-slider__card--purple">
                             <div class="cryistals-slider__card-content">
                                 <div class="cryistal-slider__title">
-                                    Invite Friends +
+                                    Invite Friends
                                 </div>
 
                                 <div class="cryistal-slider__text">
-                                    Over 1,000,000 gems
+                                    50 gems for registration
                                 </div>
 
 
@@ -293,7 +352,7 @@ centerMode: true}">-->
             <a ui-sref="crystals.leaderboard" class="players-activity__item">
 		<span class="players-activity__img-wrapper">
             <span class="players-activity__img-leaderboard">
-                
+
             </span>
 		</span>
                 <span class="players-activity__text">
@@ -305,9 +364,9 @@ centerMode: true}">-->
             <a ui-sref="crystals.rewards({all_users: true})" class="players-activity__item">
             <span class="players-activity__img-wrapper">
                  <span class="players-activity__img-recent-payouts">
-                
+
             </span>
-              
+
             </span>
             <span class="players-activity__text">
                 Recent Payouts

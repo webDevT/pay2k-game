@@ -447,7 +447,7 @@ main {
     height: 35px;
     width: 35px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     -webkit-border-radius: 3px;
@@ -1022,9 +1022,6 @@ h2.text-center.ng-scope {
     display: flex;
     align-items: center;
 }
-.cryistals-play-earn-items--popular {
-    margin-top: 115px;
-}
 .cristals__orange-button .game-orange-button-icon--1 {
    width: 45px;
    height: 45px;
@@ -1041,7 +1038,7 @@ h2.text-center.ng-scope {
    background: url("../static/crystals/img/remove-letters-white.png");
    background-repeat: no-repeat;
    background-position: left center;
-   background-size: 37.5px 37.5px;
+   background-size: 35px 35px;
 }
 .cristals__orange-button .game-orange-button-icon--3 {
    width: 45px;
@@ -1052,9 +1049,26 @@ h2.text-center.ng-scope {
    background-position: left center;
    background-size: 45px 45px;
 }
-/*.game-orange-button-icon--1 {
-    background: url("../app-static/images/revela the letter white.png");
-}*/
+.gameplay-secondary-screen > div.completed-screen button {
+    margin-bottom: 6vh;
+    margin-top: 0;
+}
+.gameplay-secondary-screen > div.completed-screen h2.text-orange {
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+.gameplay-secondary-screen > div.completed-screen h2.text-white {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.gameplay-secondary-screen .img-game-container img {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.gameplay-secondary-screen .buttons-price__wrapper .btn.price:first-child{
+    margin-bottom: 0;
+    margin-top: 0;
+}
 /*end desktop style*/
 
 /*start max-width style*/
@@ -1092,6 +1106,9 @@ h2.text-center.ng-scope {
     }
 
     .cristals__orange-button-text {
+        font-size: 4.5vw;
+    }
+    .letters-list-bottom li button {
         font-size: 4.5vw;
     }
 }
@@ -1156,6 +1173,21 @@ h2.text-center.ng-scope {
     }
     .top-btns-group .btn {
         font-size: 1.3rem !important;
+    }
+    .cristals__orange-button .game-orange-button-icon--1 {
+        width: 10vw;
+        height: 10vw;
+        background-size: 10vw 10vw;
+    }
+    .cristals__orange-button .game-orange-button-icon--2 {
+        width: 7vw;
+        height: 7vw;
+        background-size: 7vw 7vw;
+    }
+    .cristals__orange-button .game-orange-button-icon--3 {
+        width: 9vw;
+        height: 9vw;
+        background-size: 9vw 9vw;
     }
 
 }

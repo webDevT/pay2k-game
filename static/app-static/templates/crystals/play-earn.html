@@ -24,7 +24,7 @@
 
 
         <div class="cryistals-container cryistals-container--play-earn">
-            <a href="" class="cryistals-block cryistals-block--info">
+            <a href="javascript://" class="cryistals-block cryistals-block--info">
 
                 <div class="cryistals-win-content cryistals-win-content--info">
                     <div class="cryistals-win__text">
@@ -42,6 +42,42 @@
 
             </a>
         </div>
+        
+        <div class="cryistals-container" ng-if="native_language_apps">
+        <div class="cryistals-block">
+
+            <div class="cryistals-block__header">
+                <a ui-sref="crystals.play_earn.catalog({source: 'popular', search_results_title: 'Top 100 in ' + app_config.country, languages_to_filter: app_config.user_native_languages})" class="cryistals__text cryistals__block-title" ng-bind="'Top 100 in ' + app_config.country">
+                </a>
+
+                <a ui-sref="crystals.play_earn.catalog({source: 'popular', search_results_title: 'Top 100 in ' + app_config.country, languages_to_filter: app_config.user_native_languages})" class="cryistals-more">
+                    <div class="cryistals-more__text">
+                        More
+                    </div>
+
+
+                </a>
+
+            </div>
+
+
+            <div class="cryistals-play-earn-items">
+                <a ng-repeat="app in native_language_apps" href="javascript://" class="cryistals-play-earn-item"
+                   ng-click="open_prelaunch_app_dialog(app)">
+        <span class="cryistals-play-earn__img">
+            <img ng-src="{{ app.icon }}" alt="{{ app.name }}" class="cryistals-play-earn__icon">
+        </span>
+
+                    <span class="cryistals-play-earn__title" ng-bind="app.name">
+        </span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+    </div>
 
         <div class="cryistals-container">
             <div class="cryistals-block">
@@ -66,7 +102,7 @@
                 <div class="cryistals-play-earn-items">
 
 
-                    <a href="" ng-repeat="app in popular_apps" ng-click="open_prelaunch_app_dialog(app)"
+                    <a href="javascript://" ng-repeat="app in popular_apps" ng-click="open_prelaunch_app_dialog(app)"
                        class="openPaddingLink cryistals-play-earn-item">
                         <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
                         <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
@@ -103,7 +139,7 @@
 
                 <div class="cryistals-play-earn-items">
 
-                    <a href="" ng-repeat="app in new_apps" ng-click="open_prelaunch_app_dialog(app)"
+                    <a href="javascript://" ng-repeat="app in new_apps" ng-click="open_prelaunch_app_dialog(app)"
                        class="openPaddingLink cryistals-play-earn-item">
                         <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
 			<!--<span class="cryistals-play-earn__img">
@@ -132,7 +168,7 @@
                                 </a>
                             </div>
                             <div class="cryistals-play-earn-items">
-                                <a href="" ng-repeat="app in music_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                <a href="javascript://" ng-repeat="app in music_apps" ng-click="open_prelaunch_app_dialog(app)"
                                    class="openPaddingLink cryistals-play-earn-item">
                                     <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
                                     <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
@@ -155,7 +191,7 @@
                                 </a>
                             </div>
                             <div class="cryistals-play-earn-items">
-                                <a href="" ng-repeat="app in trivia_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                <a href="javascript://" ng-repeat="app in trivia_apps" ng-click="open_prelaunch_app_dialog(app)"
                                    class="openPaddingLink cryistals-play-earn-item">
                                     <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
                                     <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
@@ -178,7 +214,7 @@
                                 </a>
                             </div>
                             <div class="cryistals-play-earn-items">
-                                <a href="" ng-repeat="app in movies_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                <a href="javascript://" ng-repeat="app in movies_apps" ng-click="open_prelaunch_app_dialog(app)"
                                    class="openPaddingLink cryistals-play-earn-item">
                                     <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
                                     <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
@@ -201,7 +237,7 @@
                                 </a>
                             </div>
                             <div class="cryistals-play-earn-items">
-                                <a href="" ng-repeat="app in cartoons_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                <a href="javascript://" ng-repeat="app in cartoons_apps" ng-click="open_prelaunch_app_dialog(app)"
                                    class="openPaddingLink cryistals-play-earn-item">
                                     <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
                                     <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
@@ -224,7 +260,7 @@
                                 </a>
                             </div>
                             <div class="cryistals-play-earn-items">
-                                <a href="" ng-repeat="app in anime_apps" ng-click="open_prelaunch_app_dialog(app)"
+                                <a href="javascript://" ng-repeat="app in anime_apps" ng-click="open_prelaunch_app_dialog(app)"
                                    class="openPaddingLink cryistals-play-earn-item">
                                     <lazy-img image="app.icon" alt-name="app.name"></lazy-img>
                                     <span class="cryistals-play-earn__title" ng-bind="app.name"></span>
@@ -233,7 +269,7 @@
                             </div>
                         </div>
             <!-- end cristals block -->
-           
+
             <div class="search-modal" ng-class="{'active': search_modal_active}">
                 <div class="game-serch-wrapper">
                     <div class="game-serch-wrapper-content">

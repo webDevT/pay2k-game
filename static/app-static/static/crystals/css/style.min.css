@@ -987,26 +987,44 @@ html.ngdialog-open, body.ngdialog-open {
     background-position: center;
 }
 .coins-img {
-    width: 15px;
-    height: 11.83px;
+    width: 25px;
+    height: 25px;
     display: block;
     background: url('/app-static/images/coins.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 15px 11.83px;
-    margin-right: 5px;
+    background-size: 100%;
+    margin-right: 10px;
 
 }
 
 .complete-cristal-icon {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     display: block;
     background: url('/app-static/static/crystals/img/cryistal.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 15px 15px;
-    margin-right: 5px;
+    background-size: 100%;
+    margin-right: 10px;
+}
+.favourite-icon {
+    cursor: pointer;
+    margin-left: 8.6px;
+    width: 20px;
+    height: 20px;
+    background: url('/app-static/static/crystals/img/star-transparent.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.favourite-icon.active {
+    background: url('/app-static/static/crystals/img/star-active.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+.btn-clipboard--popup {
+    display: flex;
 }
 @media (max-width: 568px) {
     .ngdialog.ngdialog-theme-default .ngdialog-button: focus {
@@ -1458,6 +1476,7 @@ html.ngdialog-open, body.ngdialog-open {
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     position: relative;
+    display: block;
 }
 .cryistals-play-earn__img .cryistals-play-earn__icon {
     width: 100%;
@@ -1588,6 +1607,7 @@ html.ngdialog-open, body.ngdialog-open {
 }
 .cryistals-play-earn-items--popular {
     margin-top: 20px;
+    padding-top: 88px;
 }
 .cryistals-play-earn-items--popular .cryistals-play-earn-item {
     margin-bottom: 20px;
@@ -2976,7 +2996,8 @@ a.recent-payments__item--info-need.transactions-history__item {
 }
 .splash-title {
     color: #fff;
-    font-size: 9vh;
+    font-size: 7vh;
+    line-height: 1.1;
     font-weight: 700;
     text-align: center;
 }
@@ -3347,6 +3368,38 @@ a.recent-payments__item--info-need.transactions-history__item {
 }
 .apply-button {
     margin-top: 20px;
+}
+.favorite-games__icon {
+    width: 58px;
+    height: 58px;
+    background: linear-gradient(181.7deg, #FF8F6C 2.89%, #F36580 97.11%);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+.favorite-games {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s;
+}
+.favorite-games:hover {
+    background: linear-gradient(181.7deg, #FF8F6C 2.89%, #F36580 97.11%);SW
+}
+.favorite-games:hover .cryistals__block-title {
+    color: #fff;
+}
+.favorite-games:hover .favorite-games__icon {
+    margin-right: 0;
+}
+.cryistals-header-invate-page {
+    position: static;
+}
+.invite-friends__content {
+    margin-top: 0;
 }
 @media only screen and (max-width: 992px) {
     .cryistals-wrapper {
