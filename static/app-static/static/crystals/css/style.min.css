@@ -1026,6 +1026,35 @@ html.ngdialog-open, body.ngdialog-open {
 .btn-clipboard--popup {
     display: flex;
 }
+.cristal-footer__link {
+    background: linear-gradient(180deg, #F8F8F8 0%, #F4F4F4 100%);
+    border-radius: 5px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    line-height: 1;
+
+}
+.cristal-twitter-link:before {
+    content: url('/app-static/static/crystals/img/twitter.svg');
+}
+.cristal-telegram-link:before {
+    content: url('/app-static/static/crystals/img/telegram.svg');
+}
+.cristal-instagram-link:before {
+    content: url('/app-static/static/crystals/img/instagram.svg');
+}
+.cristal-mail-link:before {
+    content: url('/app-static/static/crystals/img/email.svg');
+}
+.cristals__contact {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
 @media (max-width: 568px) {
     .ngdialog.ngdialog-theme-default .ngdialog-button: focus {
     -webkit-animation: none;
@@ -1206,6 +1235,7 @@ html.ngdialog-open, body.ngdialog-open {
 }
 .cryistals-header__contetn-photo {
     width: 97px;
+    min-width: 97px;
     height: 97px;
     background: #fff;
     padding: 4px;
@@ -2977,6 +3007,12 @@ a.recent-payments__item--info-need.transactions-history__item {
 .spalsh__page {
     max-height: calc(100vh - 70px);
     height: calc(100vh - 70px);
+    max-height: -webkit-calc(100vh - 70px);
+    height: -webkit-calc(100vh - 70px);
+    -webkit-max-height: calc(100vh - 70px);
+    -webkit-height: calc(100vh - 70px);
+    -webkit-max-height: -webkit-calc(100vh - 70px);
+    -webkit-height: -webkit-calc(100vh - 70px);
 }
 .splash__header {
     padding-top: 7vh;

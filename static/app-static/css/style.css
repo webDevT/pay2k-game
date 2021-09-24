@@ -1075,8 +1075,8 @@ h2.text-center.ng-scope {
 
 @media screen and (max-width: 992px) {
     .letters-list-bottom li {
-        width: 10vw;
-        height: 10vw;
+        width: 10.1vw;
+        height: 10.1vw;
         margin: 1vw;
     }
 
@@ -1222,8 +1222,14 @@ h2.text-center.ng-scope {
     .top-btns-group .btn {
         font-size: 1.3rem;
     }
-}
 
+}
+@media screen and (max-width: 415px) { 
+    .letters-list-bottom li {
+        width: 10.8vw;
+        height: 10.8vw;
+    }
+}
 @media screen and (max-width: 380px) {
     .letters-list li {
         width: 30px !important
@@ -1242,6 +1248,7 @@ h2.text-center.ng-scope {
         font-size: 1.3rem;
         padding: 8px 12px 10px;
     }
+
 }
 
 @media screen and (max-width: 375px) {
@@ -1363,6 +1370,7 @@ h2.text-center.ng-scope {
     .letters-list-bottom {
         max-width: 100%;
     }
+
  
 }
 
