@@ -10,21 +10,20 @@
             {{ ngDialogData.win_data.winner_username }}
         </div>
         <div class="popup-lottery__sub-title">
-            won ${{ ngDialogData.win_data.award }}
+            {{ 'won'|translate }} ${{ ngDialogData.win_data.award }}
 
         </div>
 
-        <div class="popup-loss__text" ng-if="!ngDialogData.win_data.win">
-            Don't worry. Please participate in the
-            next raffle and try your luck.
+        <div class="popup-loss__text" ng-if="!ngDialogData.win_data.win" translate>
+            raffle_loose_text
         </div>
 
-        <div class="popup-loss__text" ng-if="ngDialogData.win_data.win">
-            YOU ARE THE WINNER!!!
+        <div class="popup-loss__text" ng-if="ngDialogData.win_data.win" translate>
+            raffle_win_text
         </div>
 
-        <button class="invite-friends__form-button invite-friends__form-button--sm" ng-click="closeThisDialog()">
-            Close
+        <button class="invite-friends__form-button invite-friends__form-button--sm" ng-click="closeThisDialog()" translate>
+            close_text
         </button>
 
     </div>

@@ -4,7 +4,7 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
-                 <span class="cryistals__search-wrapper-arrow"></span> Transaction History
+                 <span class="cryistals__search-wrapper-arrow"></span> <span translate>transaction_history</span>
                 </a>
 
 
@@ -23,7 +23,9 @@
                             <div class="transactions-history__item-title" ng-bind="get_transaction_description(t)">
                             </div>
 
-                            <div class="transactions-history__item-text" ng-bind="'Completed - ' + t.timestamp">
+                            <div class="transactions-history__item-text">
+                                <span translate>completed_</span>
+                                <span ng-bind="t.timestamp"></span>
                             </div>
                             <div ng-if="t.source" class="transactions-history__item-text" ng-bind="t.source">
                             </div>

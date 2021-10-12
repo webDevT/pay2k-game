@@ -4,11 +4,11 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a href="javascript://" ng-click="cancel_edit_profile()" class="cryistals-back">
-                    <span class="cryistals__search-wrapper-arrow"></span>Back
+                    <span class="cryistals__search-wrapper-arrow"></span> <span translate>back</span>
                 </a>
 
                 <div class="cryistals-header__menu">
-                    <button type="button" id="submit" ng-click="save_profile()" class="cryistals-back">Save</button>
+                    <button type="button" id="submit" ng-click="save_profile()" class="cryistals-back" translate>save</button>
                 </div>
             </div>
 
@@ -32,16 +32,23 @@
             <div class="cryistals-profile__form">
 
                 <div class="cryistals__form-row">
-                    <label for="full_name" class="cryistals__label">
-                        Full name
+                    <label for="full_name" class="cryistals__label" translate>
+                        user_id
+                    </label>
+                    <input type="text" class="cryistals__input" value="{{ profile.invite_code }}" name="name" readonly="true">
+                </div>
+
+                <div class="cryistals__form-row">
+                    <label for="full_name" class="cryistals__label" translate>
+                        full_name
                     </label>
                     <input type="text" placeholder="Full name" class="cryistals__input" ng-model="_profile.username"
                            id="full_name" name="name" ng-required="true">
                 </div>
 
                 <div class="cryistals__form-row">
-                    <label for="email" class="cryistals__label">
-                        Email
+                    <label for="email" class="cryistals__label" translate>
+                        email
                     </label>
 
                     <input type="text" id="email" name="email" placeholder="email" ng-model="_profile.email"

@@ -5,7 +5,7 @@
 	<div class="cryistals-container">
 		<div class="cryistals-header__top">
 			<a ng-click="exit_crystals_and_update_amount()" class="cryistals-back">
-				<span class="cryistals__search-wrapper-arrow"></span> My Gems
+				<span class="cryistals__search-wrapper-arrow"></span> <span translate>my_gems</span>
 			</a>
 
 			<div class="cryistals-header__menu" ng-class="{'active': dots_menu_active}" ng-click="dots_menu_active = !dots_menu_active;$event.stopPropagation();">
@@ -14,10 +14,10 @@
 
 				</div>
 				<div class="cryistals-header__menu-content">
-					<a ui-sref="crystals.transactions" class="cryistals-header__menu-item">Transaction History</a>
-					<a ui-sref="crystals.leaderboard" class="cryistals-header__menu-item">Leaderboards</a>
-					<a ui-sref="crystals.rewards({all_users: false, profile: profile, from_state: 'index'})" class="cryistals-header__menu-item">My payments</a>
-					<a ui-sref="crystals.rewards({page: 'wallet', profile: profile, from_state: 'index'})" class="cryistals-header__menu-item">Connect Wallet</a>
+					<a ui-sref="crystals.transactions" class="cryistals-header__menu-item" translate>transaction_history</a>
+					<a ng-if="profile.league" ui-sref="crystals.leaderboard({league:profile.league})" class="cryistals-header__menu-item" translate="{{ profile.league==1?'bronze_leaderboard':'silver_leaderboard' }}"></a>
+					<a ui-sref="crystals.rewards({all_users: false, profile: profile, from_state: 'index'})" class="cryistals-header__menu-item" translate>my_payments</a>
+					<a ui-sref="crystals.rewards({page: 'wallet', profile: profile, from_state: 'index'})" class="cryistals-header__menu-item" translate>connect_wallet</a>
 				</div>
 			</div>
 </div>
@@ -62,8 +62,8 @@
 
 	<div class="cryistals-win-content cryistals-win-content--wallet">
                 <div class="cryistals-win__text">
-			<span class="cryistals__title gradient-text">
-						Connect Wallet
+			<span class="cryistals__title gradient-text" translate>
+						connect_wallet
 					</span>
                     <div class="cryistals-text">
                         To get paid, you need to connect your crypto wallet.
@@ -78,11 +78,11 @@
 
 	<div class="cryistals-win-content cryistals-win-content--wallet">
                 <div class="cryistals-win__text">
-			<span class="cryistals__title gradient-text">
-						Connect Wallet
+			<span class="cryistals__title gradient-text" translate>
+						connect_wallet
 					</span>
-                    <div class="cryistals-text">
-                        To get paid, you need to connect your crypto wallet.
+                    <div class="cryistals-text" translate>
+                        to_get_paid
                     </div>
                 </div>
             </div>
@@ -90,17 +90,16 @@
         </a>
     </div>
 
-    <div class="cryistals-container">
-        <a ui-sref="crystals.leaderboard" class="cryistals-block" ng-click2="call_info_popup()">
+    <div class="cryistals-container" ng-if="profile.league==1">
+        <a ui-sref="crystals.leaderboard" class="cryistals-block">
 
             <div class="cryistals-win-content">
                 <div class="cryistals-win__text">
-                <span class="cryistals__title gradient-text">
-                    Win $10
+                <span class="cryistals__title gradient-text" translate>
+                    win_10
                 </span>
-                    <div class="cryistals-text">
-                        Today’s highest gems
-                        balance wins!
+                    <div class="cryistals-text" translate>
+                        bronze_leaderboard_rule
                     </div>
                 </div>
 
@@ -113,16 +112,38 @@
     </div>
 
 
+    <div class="cryistals-container" ng-if="profile.league">
+        <a ui-sref="crystals.leaderboard({league: 2})" class="cryistals-block">
+
+            <div class="cryistals-win-content">
+                <div class="cryistals-win__text">
+                <span class="cryistals__title gradient-text" translate>
+                    win_75
+                </span>
+                    <div class="cryistals-text" translate>
+                        only_for_bronze_league_winner
+                    </div>
+                </div>
+
+                <div class="cryistals-win__img cryistals-win__img--money">
+
+                </div>
+            </div>
+
+        </a>
+    </div>
+
     <div class="cryistals-container">
         <a ui-sref="crystals.raffle" class="cryistals-block">
 
             <div class="cryistals-win-content">
+                <div class="raffle-attention-pulse-sign" ng-if="profile.pending_raffle_tickets"></div>
                 <div class="cryistals-win__text">
-        <span class="cryistals__title gradient-text">
-                    Raffle
+        <span class="cryistals__title gradient-text" translate>
+                    raffle
                 </span>
-                    <div class="cryistals-text">
-                        Win up to $100 each week<br>Winner guaranteed!
+                    <div class="cryistals-text" translate>
+                        100_each_week
                     </div>
                 </div>
 
@@ -134,40 +155,71 @@
         </a>
     </div>
 
+    <style>
+        .raffle-attention-pulse-sign {
+            border-radius: 50%;
+            margin: 10px;
+            height: 20px;
+            width: 20px;
+            transform: scale(1);
+            background: rgb(162 92 212);
+            box-shadow: 0 0 0 0 rgb(188 95 185);
+            animation: pulse-orange 1.5s infinite;
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            animation: raffle-attention-pulse 1.2s infinite;
+        }
+
+        @keyframes raffle-attention-pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(198, 95, 174, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+            }
+        }
+
+    </style>
+
 <!-- start favorite game
  -->
 
-  <div class="cryistals-container">
-        <a class="cryistals-block favorite-games">
-<span class="favorite-games__icon">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.62484 23.2707C4.84769 23.4319 5.1088 23.5139 5.37175 23.5139C5.59881 23.5139 5.82385 23.4527 6.02583 23.3328L12 19.7607L17.9742 23.3308C18.4102 23.5928 18.9623 23.5697 19.3763 23.2698C19.7912 22.9699 19.9853 22.4528 19.8722 21.9527L18.3282 15.1516L23.5644 10.5605C23.9493 10.2245 24.0955 9.69146 23.9374 9.20548C23.7794 8.71951 23.3495 8.37435 22.8393 8.32839L15.9122 7.6994L13.173 1.28817C12.9711 0.818306 12.5111 0.51416 12 0.51416C11.489 0.51416 11.029 0.818306 10.827 1.28927L8.08784 7.6994L1.15964 8.32839C0.650586 8.37545 0.22064 8.71951 0.0626143 9.20548C-0.095411 9.69237 0.0516276 10.2245 0.436528 10.5605L5.67279 15.1525L4.12879 21.9538C4.01581 22.4528 4.20973 22.9699 4.62484 23.2707Z" fill="white"/>
-</svg>
-
-
-
-</span>
-     <span class="cryistals__text cryistals__block-title">
-    Favorites   games
-</span>     
-
+<div class="cryistals-container" ng-if="app_config.favourite_list.length">
+        <a class="cryistals-block favorite-games" ui-sref="crystals.favourite" href="javascript://">
+            <span class="favorite-games__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.62484 23.2707C4.84769 23.4319 5.1088 23.5139 5.37175 23.5139C5.59881 23.5139 5.82385 23.4527 6.02583 23.3328L12 19.7607L17.9742 23.3308C18.4102 23.5928 18.9623 23.5697 19.3763 23.2698C19.7912 22.9699 19.9853 22.4528 19.8722 21.9527L18.3282 15.1516L23.5644 10.5605C23.9493 10.2245 24.0955 9.69146 23.9374 9.20548C23.7794 8.71951 23.3495 8.37435 22.8393 8.32839L15.9122 7.6994L13.173 1.28817C12.9711 0.818306 12.5111 0.51416 12 0.51416C11.489 0.51416 11.029 0.818306 10.827 1.28927L8.08784 7.6994L1.15964 8.32839C0.650586 8.37545 0.22064 8.71951 0.0626143 9.20548C-0.095411 9.69237 0.0516276 10.2245 0.436528 10.5605L5.67279 15.1525L4.12879 21.9538C4.01581 22.4528 4.20973 22.9699 4.62484 23.2707Z" fill="white"/>
+            </svg>
+            </span>
+                 <span class="cryistals__text cryistals__block-title" translate>
+                fav_games
+            </span>
         </a>
-    </div>
+</div>
 
 <!-- end favorite game
  -->
 
- <div class="cryistals-container">
+ <div class="cryistals-container" ng-if="profile.recently_played.length">
         <div class="cryistals-block">
 
             <div class="cryistals-block__header">
-                <a ui-sref="crystals.play_earn" class="cryistals__text cryistals__block-title">
-                    Recently played
+                <a ui-sref="crystals.recently_apps" class="cryistals__text cryistals__block-title" translate>
+                    recently_games
                 </a>
 
-                <a ui-sref="crystals.play_earn" class="cryistals-more">
-                    <div class="cryistals-more__text">
-                        More
+                <a ui-sref="crystals.recently_apps" class="cryistals-more">
+                    <div class="cryistals-more__text" translate>
+                        more
                     </div>
 
 
@@ -177,7 +229,7 @@
 
 
             <div class="cryistals-play-earn-items">
-                <a ng-repeat="app in play_n_earn" href="javascript://" class="cryistals-play-earn-item"
+                <a ng-repeat="app in profile.recently_played" href="javascript://" class="cryistals-play-earn-item"
                    ng-click="open_prelaunch_app_dialog(app)">
         <span class="cryistals-play-earn__img">
             <img ng-src="{{ app.icon }}" alt="{{ app.name }}" class="cryistals-play-earn__icon">
@@ -198,13 +250,13 @@
         <div class="cryistals-block">
 
             <div class="cryistals-block__header">
-                <a ui-sref="crystals.play_earn" class="cryistals__text cryistals__block-title">
-                    Play & Earn
+                <a ui-sref="crystals.play_earn" class="cryistals__text cryistals__block-title" translate>
+                    play_earn
                 </a>
 
                 <a ui-sref="crystals.play_earn" class="cryistals-more">
-                    <div class="cryistals-more__text">
-                        More
+                    <div class="cryistals-more__text" translate>
+                        more
                     </div>
 
 
@@ -235,8 +287,8 @@
         <div class="cryistals-block cryistals-block--slider">
 
             <div class="cryistals-block__header cryistals-block__header--slider">
-                <div class="cryistals__text cryistals__block-title">
-                    Earn more gems
+                <div class="cryistals__text cryistals__block-title" translate>
+                    earn_more_gems
                 </div>
 
                 <!--<a href="" class="cryistals-more">
@@ -259,12 +311,12 @@ centerMode: true}">-->
                     <div class="cryistals-slide-item" ng-show="app_config.has_pollfish_survey" ng-click="start_pollfish_survey()">
                         <div class="cryistals-slider__card cryistals-slider__card--orange">
                             <div class="cryistals-slider__card-content">
-                                <div class="cryistal-slider__title">
-                                    Take a Survey
+                                <div class="cryistal-slider__title" translate>
+                                    take_survey
                                 </div>
 
-                                <div class="cryistal-slider__text">
-                                    Over 1,000,000 gems
+                                <div class="cryistal-slider__text" translate>
+                                    over_1kk_gems
                                 </div>
                             </div>
                         </div>
@@ -273,12 +325,12 @@ centerMode: true}">-->
                     <div class="cryistals-slide-item" ng-click="route_to_state($event, 'crystals.invites')" ng-mousedown="track_click_position_in_slick($event)">
                         <div class="cryistals-slider__card cryistals-slider__card--purple">
                             <div class="cryistals-slider__card-content">
-                                <div class="cryistal-slider__title">
-                                    Invite Friends
+                                <div class="cryistal-slider__title" translate>
+                                    invite_friends
                                 </div>
 
-                                <div class="cryistal-slider__text">
-                                    50 gems for registration
+                                <div class="cryistal-slider__text" translate>
+                                    gems_for_reg
                                 </div>
 
 
@@ -286,7 +338,7 @@ centerMode: true}">-->
                         </div>
                     </div>
 
-                <div class="cryistals-slide-item" ng-show2="app_config.has_pollfish_survey"
+                <!--<div class="cryistals-slide-item" ng-show2="app_config.has_pollfish_survey"
                      ng-click="adgem_offerwall()">
                     <div class="cryistals-slider__card cryistals-slider__card--star">
                         <div class="cryistals-slider__card-content">
@@ -294,23 +346,23 @@ centerMode: true}">-->
                                Special Offers
                             </div>
 
-                            <div class="cryistal-slider__text">
-                                Over 1,000,000 gems
+                            <div class="cryistal-slider__text" translate>
+                                over_1kk_gems
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="cryistals-slide-item" ng-show2="app_config.has_pollfish_survey"
                      ng-click="adgate_offerwall()">
                     <div class="cryistals-slider__card cryistals-slider__card--star-orange">
                         <div class="cryistals-slider__card-content">
-                            <div class="cryistal-slider__title">
-                                Top Offers
+                            <div class="cryistal-slider__title" translate>
+                                top_offers
                             </div>
 
-                            <div class="cryistal-slider__text">
-                                Over 1,000,000 gems
+                            <div class="cryistal-slider__text" translate>
+                                over_1kk_gems
                             </div>
                         </div>
                     </div>
@@ -342,21 +394,20 @@ centerMode: true}">-->
         <div class="cryistals-block">
 
             <div class="cryistals-block__header">
-                <a href="javascript://" class="cryistals__text cryistals__block-title">
-                    Players’ activity
+                <a href="javascript://" class="cryistals__text cryistals__block-title" translate>
+                    players_activity
                 </a>
 
 
             </div>
 
-            <a ui-sref="crystals.leaderboard" class="players-activity__item">
+            <a ui-sref="crystals.leaderboard({league:profile.league})" class="players-activity__item">
 		<span class="players-activity__img-wrapper">
             <span class="players-activity__img-leaderboard">
 
             </span>
 		</span>
-                <span class="players-activity__text">
-			Leaderboard
+                <span class="players-activity__text" translate="{{ profile.league==1?'bronze_leaderboard':'silver_leaderboard' }}">
 		</span>
 
             </a>
@@ -368,8 +419,8 @@ centerMode: true}">-->
             </span>
 
             </span>
-            <span class="players-activity__text">
-                Recent Payouts
+            <span class="players-activity__text" translate>
+                recent_payouts
             </span>
             </a>
 
@@ -382,8 +433,8 @@ centerMode: true}">-->
         <div class="cryistals-block">
 
             <div class="cryistals-block__header">
-                <a href="javascript://" class="cryistals__text cryistals__block-title">
-                    Contact us
+                <a href="javascript://" class="cryistals__text cryistals__block-title" translate>
+                    contact_us
                 </a>
 
 
@@ -396,20 +447,20 @@ centerMode: true}">-->
                         <a target="_blank" href="https://t.me/pay2k_channel" class="cristal-telegram-link cristal-footer__link">
 
                         </a>
-                        <a target="_blank" href="https://www.instagram.com/pay2k.ru/" class="cristal-instagram-link cristal-footer__link">
+                        <a target="_blank" href="https://www.instagram.com/pay2k.mobile/" class="cristal-instagram-link cristal-footer__link">
                         </a>
                  <a target="_blank" href="mailto:support@pay2k.com" class="cristal-mail-link cristal-footer__link">
 
                         </a>
 
-                       
 
-                        
-                        
+
+
+
 
             </div>
 
-            
+
 
         </div>
 

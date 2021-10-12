@@ -1,6 +1,7 @@
 <div class="apply-filter">
     <label class="filter-checkbox filter-checkbox--1" ng-click="toggle_languages()">
-        <i ng-bind="languages_to_filter==36?'Clear all':'Check all'"></i>
+        <i ng-if="languages_to_filter==36" translate>clear_all</i>
+        <i ng-if="languages_to_filter!=36" translate>check_all</i>
         <i class="fas" ng-class="{'fa-toggle-on': languages_to_filter.length==36, 'fa-toggle-off': languages_to_filter.length!=36 }">
 
         </i>
@@ -11,5 +12,5 @@
             <i ng-bind="language.name"></i><input type="checkbox" ng-model="language.selected"><br>
         </label>
     </div>
-    <a href="javascript://" class="popup-button apply-button" ng-click="apply()">Apply</a>
+    <a href="javascript://" class="popup-button apply-button" ng-click="apply()" translate>apply</a>
 </div>

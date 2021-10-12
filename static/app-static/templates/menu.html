@@ -11,9 +11,8 @@
             </li>
             <li style="position: relative;" ng-class="{'is-copy': copy_was_succeed}"><a ng-click="share()" ngclipboard
              data-clipboard-text="https://pay2k.com/catalogue/{{ app_config.app_uid }}/#!/splash/{{ app_config.invite_code }}"><text translate>share</text></a>
-                <div class="cipboard-succ" id="cipboard-succ">
-                Game link
-                copied!
+            <div class="cipboard-succ" id="cipboard-succ" translate>
+                game_link_copied
             </div>
             </li>
             <li>
@@ -23,11 +22,11 @@
                 </a>
             </li>
 
-            <li>
-                <a href="">Add to Favourites</a>
+            <li ng-if="!app_in_favourite_list">
+                <a href="javascript://" ng-click="add_app_to_favourite_list()" translate>add_to_favs</a>
             </li>
 
-            
+
             <li ng-if="friends_play_too"><a ui-sref="base.gameplay.help_friends" translate>help_friends_with_level</a></li>
             <!--<li><a href="">About</a></li>-->
             <!--<li><a href="">Contact us</a></li>-->

@@ -3,7 +3,7 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
-                    <span class="cryistals__search-wrapper-arrow"></span>Recent payments
+                    <span class="cryistals__search-wrapper-arrow"></span> <span translate>recent_payouts</span>
                 </a>
             </div>
 
@@ -20,8 +20,8 @@
                            <div class="payouts-history-icon">
 
                         </div>
-                            <div class="no-payouts-title">
-                                No Payouts Yet!
+                            <div class="no-payouts-title" translate>
+                                no_payouts_yet
                             </div>
                         </div>
                     </div>
@@ -34,30 +34,30 @@
                                 <div class="recent-payments__info-wrapper">
 
                                     <div class="leaderboard__row-wrapper">
-                                        <div class="recent-payments__sub-title">
-                                            Name
+                                        <div class="recent-payments__sub-title" translate>
+                                            name
                                         </div>
                                         <div class="leaderboard__name" ng-bind="r.username">
                                         </div>
                                     </div>
                                     <div class="leaderboard__row-wrapper">
-                                        <div class="recent-payments__sub-title">
-                                            Date
+                                        <div class="recent-payments__sub-title" translate>
+                                            date
                                         </div>
                                         <div class="recent-payments__date">
                                             <span ng-bind="r.timestamp|timeAgo"></span>
                                         </div>
                                     </div>
                                     <div class="leaderboard__row-wrapper">
-                                        <div class="recent-payments__sub-title">
-                                            Type
+                                        <div class="recent-payments__sub-title" translate>
+                                            type
                                         </div>
                                         <div class="recent-payments__text" ng-bind="get_reward_description(r)">
                                         </div>
                                     </div>
                                     <div class="leaderboard__row-wrapper">
-                                        <div class="recent-payments__sub-title">
-                                            Amount
+                                        <div class="recent-payments__sub-title" translate>
+                                            amount
                                         </div>
                                         <div class="recent-payments__text">
                                             <span ng-bind="(r.amount|currency:'':4)"></span>

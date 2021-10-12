@@ -4,7 +4,7 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
-                     <span class="cryistals__search-wrapper-arrow"></span>Invite Friends
+                     <span class="cryistals__search-wrapper-arrow"></span><span translate>invite_friends</span>
                 </a>
 
 
@@ -12,14 +12,12 @@
             <div class="invite-friends__header">
 
                 <div class="invite-friends__img"></div>
-                <div class="invite-friends__text">
-                    Get 50 gems for each friends
-                    that joins!
-
+                <div class="invite-friends__text" translate>
+                    50_gems_per_invite
                 </div>
 
-                <div class="invite-friends__code-title">
-                    Your Code:
+                <div class="invite-friends__code-title" translate>
+                    your_code
                 </div>
 
                 <div class="invite-friends__code-wrapper">
@@ -27,14 +25,13 @@
                     <div ng-class="{'is-copy': copy_was_succeed}" class="btn-clipboard btn-clipboard--popup"
                          ngclipboard data-clipboard-text="{{ $resolve.profile.invite_code }}" ngclipboard-success="app_link_copied(e);">
 
-                        <div class="share-btn">
-                            Share
+                        <div class="share-btn" translate>
+                            share
                         </div>
 
 
-                        <div class="cipboard-succ" id="cipboard-succ">
-                            Game link
-                            copied!
+                        <div class="cipboard-succ" id="cipboard-succ" translate>
+                            invite_code_copied
                         </div>
                     </div>
                 </div>
@@ -46,23 +43,23 @@
         <div class="cryistals-container">
 
             <div class="invite-friends__block" ng-show="!$resolve.profile.filled_invite_code">
-                <div class="invite-friends__form-title invite-friends__form-title--gradient">
-                    Did a friend invite you?
+                <div class="invite-friends__form-title invite-friends__form-title--gradient" translate>
+                    did_a_friend_invite
                 </div>
 
                 <div class="invite-friends__form">
-                    <input type="text" placeholder="Enter code" ng-model="invite_code" class="invite-friends__form-input">
+                    <input type="text" placeholder="{{ 'enter_code'|translate }}" ng-model="invite_code" class="invite-friends__form-input">
 
-                    <button type="button" class="invite-friends__form-button" ng-click="apply_invite_code()">
-                        Submit
+                    <button type="button" class="invite-friends__form-button" ng-click="apply_invite_code()" translate>
+                        submit
                     </button>
                 </div>
             </div>
 
 
             <div class="invite-friends__block" ng-show="$resolve.profile.filled_invite_code">
-                <div class="invite-friends__form-title">
-                    You entered code:
+                <div class="invite-friends__form-title" translate>
+                    you_entered_code
                 </div>
 
                 <div class="invite-friends__value invite-friends__form-title--gradient" ng-bind="$resolve.profile.filled_invite_code"></div>

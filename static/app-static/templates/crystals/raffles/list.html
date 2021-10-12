@@ -3,19 +3,19 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
-                    <span class="cryistals__search-wrapper-arrow"></span> My Gems
+                    <span class="cryistals__search-wrapper-arrow"></span> <span translate>my_gems</span>
                 </a>
 
             </div>
             <div class="cryistals-header__contetn">
                 <div class="cryistals-header__contetn-left raffle-lottery__header">
 					<span class="cryistals-header__user-info">
-						<span class="cryistals__title">
-						Raffle
+						<span class="cryistals__title" translate>
+						raffle
 					</span>
 
-					<span class="raffle-header__text">
-						Win up to $100 each week<br>Winner guaranteed!
+					<span class="raffle-header__text" translate>
+						100_each_week
 					</span>
 					</span>
 
@@ -26,10 +26,47 @@
             </div>
         </div>
         <div class="lottery-tabs">
-            <div ng-class="{'active': tab == 1}" class="lottery-tab" ng-click="tab = 1">New Lottery</div>
-            <div ng-class="{'active': tab == 2}" class="lottery-tab" ng-click="tab = 2">Сheck Winner</div>
+            <div ng-class="{'active': tab == 1}" class="lottery-tab" ng-click="tab = 1"><span translate>new_lottery</span></div>
+            <div ng-class="{'active': tab == 2}" class="lottery-tab" ng-click="tab = 2">
+                <div class="raffle-attention-pulse-sign" ng-if="(raffles_check_winner|filter:{opened:0}).length"></div>
+                <span translate>check_winner</span>
+            </div>
         </div>
     </div>
+    <style>
+        .raffle-attention-pulse-sign {
+            border-radius: 50%;
+            margin: 10px;
+            height: 20px;
+            width: 20px;
+            transform: scale(1);
+            background: rgb(162 92 212);
+            box-shadow: 0 0 0 0 rgb(188 95 185);
+            animation: pulse-orange 1.5s infinite;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            animation: raffle-attention-pulse 1.2s infinite;
+        }
+
+        @keyframes raffle-attention-pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(198, 95, 174, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+            }
+        }
+
+    </style>
     <section class="lottery-content">
         <div class="cryistals-container">
             <div class="lottery-tabs__content">
@@ -73,14 +110,14 @@
                         <div class="lottery-item__content">
                             <div class="lottery-left">
                                 <div class="lottery-iten__name" ng-bind="raffle.name"></div>
-                                <div class="lottery-item__text">
-                                    Guaranteed winner today!
+                                <div class="lottery-item__text" translate>
+                                    guaranteed_winner_today
                                 </div>
 
                             </div>
                             <div class="lottery-right">
-                                <div class="lottery-price">
-                                    Reveal now
+                                <div class="lottery-price" translate>
+                                    reveal_now
                                 </div>
                             </div>
                         </div>

@@ -4,19 +4,19 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.raffle" class="cryistals-back">
-                    <span class="cryistals__search-wrapper-arrow"></span> My Gems
+                    <span class="cryistals__search-wrapper-arrow"></span> <span translate>my_gems</span>
                 </a>
 
             </div>
             <div class="cryistals-header__contetn">
                 <div class="cryistals-header__contetn-left raffle-lottery__header">
 					<span class="cryistals-header__user-info">
-						<span class="cryistals__title">
-						Raffle
+						<span class="cryistals__title" translate>
+						raffle
 					</span>
 
-					<span class="raffle-header__text">
-						Win up to $100 each week<br>Winner guaranteed!
+					<span class="raffle-header__text" translate>
+						100_each_week
 					</span>
 					</span>
 
@@ -56,16 +56,16 @@
             </a>
 
             <div class="openlottery__content">
-                <div class="openlottery-title">
-                    Details:
+                <div class="openlottery-title" translate>
+                    raffle_details
                 </div>
 
                 <div class="openlottery-text" ng-bind="raffle.description">
                 </div>
 
 
-                <div class="openlottery-title">
-                    Your Tickets
+                <div class="openlottery-title" translate>
+                    your_tickets
                 </div>
 
                 <!--<div class="tickets-num-wrapper">
@@ -101,7 +101,7 @@
 
 
             <a class="popup-button connect-walet-btn" ng-click="buy_ticket()">
-                <span>Buy Ticket</span>
+                <span translate>buy_ticket</span>
                 <span ng-if="buy_ticket.started" style="margin-left: 20px;" us-spinner="{radius:8, width:4, length: 8, lines: 12, color: '#fff', position: 'relative'}"></span>
             </a>
 

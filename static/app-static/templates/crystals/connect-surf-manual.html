@@ -7,7 +7,7 @@
                     <span class="cryistals__search-wrapper-arrow"></span>Connect Wallet
                 </a>
                 <a ng-if="from_state == 'index'" ui-sref="crystals.index({silent: true})" class="cryistals-back">
-                     <span class="cryistals__search-wrapper-arrow"></span>Connect Wallet
+                     <span class="cryistals__search-wrapper-arrow"></span> <span translate>connect_wallet</span>
                 </a>
 
 
@@ -22,13 +22,11 @@
 
     <section class="cryistals-profile">
         <div class="cryistals-container">
-            <div class="cash-out-title cash-out-title--wallet">
-                All payments will be processed <br>
-                in crypto called "TON Crystal".
+            <div class="cash-out-title cash-out-title--wallet" translate>
+                wallet_manual_1
             </div>
-            <div class="cash-out-sub-title text-left cash-out-sub-title--margin">
-                You get paid in TON Crystals in the equivalent to US dollars. You can easily sell TON Crystals on a
-                crypto exchange.
+            <div class="cash-out-sub-title text-left cash-out-sub-title--margin" translate>
+                wallet_manual_2
             </div>
         </div>
 
@@ -37,16 +35,15 @@
 
                 <div class="cryistals__form-row">
 
-                    <input type="text" placeholder="TON Crystal Wallet Address:" ng-model="profile.ton_wallet_manual" class="cryistals__input">
+                    <input type="text" placeholder="{{ 'ton_cry_wallet_addr'|translate }}" ng-model="profile.ton_wallet_manual" class="cryistals__input">
 
                     <div class="input-prompt">
-                        Don’t
-                        have TON Crystal wallet address? Download free TON wallet here:
+                        <span translate>wallet_manual_3</span>
                         <a href="https://ton.surf/main" target="blank">https://ton.surf/main</a>
                     </div>
                 </div>
-                <a href="javascript://" ng-click="apply_ton_wallet()" class="popup-button">
-                    Connect TON Wallet
+                <a href="javascript://" ng-click="apply_ton_wallet()" class="popup-button" translate>
+                    wallet_manual_4
                 </a>
             </div>
         </div>

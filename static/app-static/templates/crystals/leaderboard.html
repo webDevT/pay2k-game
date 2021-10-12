@@ -3,26 +3,20 @@
     <div class="cryistals-container">
         <div class="cryistals-header__top">
             <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
-                <span class="cryistals__search-wrapper-arrow"></span> Leaderboard
+                <span class="cryistals__search-wrapper-arrow"></span> <span translate="{{ league==1?'bronze_leaderboard':'silver_leaderboard' }}"></span>
             </a>
 
         </div>
         <div class="cryistals-header__contetn cryistals-header__contetn--leaderboard">
             <div class="cryistals-header__contetn-left">
 					<span class="cryistals-header__user-info cryistals-header__user-info--leaderboard">
-                    <span class="cryistals__title">
-                Win $10
+                    <span class="cryistals__title" translate="{{ league==1?'win_10':'win_75' }}">
                 </span>
 
-                <span class="cryistals-header__text">
-                    Today’s highest gems balance win
+                <span class="cryistals-header__text" translate="{{ league==1?'bronze_leaderboard_awards':'silver_leaderboard_awards' }}">
                 </span>
                 </span>
-
-
             </div>
-
-
         </div>
 
 
@@ -34,13 +28,14 @@
 
 <div class="leaderboard__game-balance-wrapper">
 
-		<div class="leaderboard-content__sub-title leaderboard-content__sub-title--white">
-			Gems Balance
+		<div class="leaderboard-content__sub-title leaderboard-content__sub-title--white" translate>
+			gems_balance
 		</div>
 <div class="leaderboard-content__sub-title leaderboard-content__sub-title--black leaderboard-content__sub-title--white">
-			Contest ends in: <timer countdown="leaderboard.time_remain" max-time-unit="'hour'" interval="1000">
-                        <span ng-bind="hhours"></span>:<span ng-bind="mminutes"></span>:<span ng-bind="sseconds"></span>
-                    </timer>
+			<span translate>end_of_contest</span>:
+    <timer countdown="league==1?leaderboard.time_remain:leaderboard.time_remain_sun" max-time-unit="league==1?'hour':'day'" interval="1000" language="{{ lang }}">
+        <span ng-if2="league==2" ng-bind="dayUnit.split(',')[0]"></span> <span ng-bind="hhours"></span>:<span ng-bind="mminutes"></span>:<span ng-bind="sseconds"></span>
+    </timer>
 		</div>
 </div>
 

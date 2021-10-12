@@ -3,7 +3,7 @@
         <div class="cryistals-container">
             <div class="cryistals-header__top">
                 <a ui-sref="crystals.index({silent: true})" ui-sref-opts="{reload: true}" class="cryistals-back">
-                     <span class="cryistals__search-wrapper-arrow"></span>Payouts History
+                     <span class="cryistals__search-wrapper-arrow"></span><span translate>payouts_history</span>
                 </a>
 
 
@@ -24,8 +24,8 @@
 
                         </div>
 
-                        <div class="no-payouts-title">
-                            No Payouts Yet!
+                        <div class="no-payouts-title" translate>
+                            no_payouts_yet
                         </div>
                     </div>
 
@@ -42,8 +42,10 @@
                         <div class="transactions-history__item-title" ng-bind="get_reward_description(r)">
                         </div>
                         <div class="transactions-history__item-text" ng-class="{'red': r.status==1}">
-                            <span ng-if="!profile.is_surf_linked">Info needed - </span>{{ r.date }}
-                            <span ng-if="r.status!=1" ng-bind="r.status==2?'Processing':'Paid'"></span>
+                            <span ng-if="r.status==1" translate>info_needed_</span>
+                            <span ng-if="r.status==2" translate>processing_</span>
+                            <span ng-if="r.status==3" translate>paid_</span>
+                            {{ r.date }}
                         </div>
                     </div>
 

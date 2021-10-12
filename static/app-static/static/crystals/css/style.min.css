@@ -1055,6 +1055,7 @@ html.ngdialog-open, body.ngdialog-open {
     align-items: center;
     margin-top: 16px;
 }
+
 @media (max-width: 568px) {
     .ngdialog.ngdialog-theme-default .ngdialog-button: focus {
     -webkit-animation: none;
@@ -1482,7 +1483,7 @@ html.ngdialog-open, body.ngdialog-open {
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .cryistals-play-earn-item {
     display: -webkit-box;
@@ -1494,6 +1495,8 @@ html.ngdialog-open, body.ngdialog-open {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin-left: 1.1%;
+    margin-right: 1.1%;
 }
 .cryistals-play-earn__title {
     font-size: 16px;
@@ -3070,7 +3073,6 @@ a.recent-payments__item--info-need.transactions-history__item {
 .leaderboard__game-balance-wrapper .leaderboard-content__sub-title--black {
     margin-top: 0;
     font-size: 13px;
-    color: #bdbcbe;
     font-weight: 500;
 }
 .text-left {

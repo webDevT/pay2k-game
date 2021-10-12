@@ -9,8 +9,8 @@
                     </a>
 
                     <div class="cryistals__search-container">
-                        <div class="cryistals__search-left" ng-bind="'Find app in catalog'">
-
+                        <div class="cryistals__search-left" translate>
+                            find_app_in_catalog
                         </div>
 
                        <div class="search-icon"></div>
@@ -28,12 +28,12 @@
 
                 <div class="cryistals-win-content cryistals-win-content--info">
                     <div class="cryistals-win__text">
-                        <div class="cryistals-text">
-                            Play games, complete levels & earn
+                        <div class="cryistals-text" translate>
+                            play_games_earn
                         </div>
-                        <span class="cryistals__title gradient-text">
-						More  Gems!
-					</span>
+                        <span class="cryistals__title gradient-text" translate>
+                            more_gems
+                        </span>
 
                     </div>
 
@@ -47,12 +47,12 @@
         <div class="cryistals-block">
 
             <div class="cryistals-block__header">
-                <a ui-sref="crystals.play_earn.catalog({source: 'popular', search_results_title: 'Top 100 in ' + app_config.country, languages_to_filter: app_config.user_native_languages})" class="cryistals__text cryistals__block-title" ng-bind="'Top 100 in ' + app_config.country">
+                <a ui-sref="crystals.play_earn.catalog({source: 'popular', search_results_title: top_100_text + app_config.country, languages_to_filter: app_config.user_native_languages})" class="cryistals__text cryistals__block-title" ng-bind="top_100_text + app_config.country">
                 </a>
 
-                <a ui-sref="crystals.play_earn.catalog({source: 'popular', search_results_title: 'Top 100 in ' + app_config.country, languages_to_filter: app_config.user_native_languages})" class="cryistals-more">
-                    <div class="cryistals-more__text">
-                        More
+                <a ui-sref="crystals.play_earn.catalog({source: 'popular', search_results_title: top_100_text + app_config.country, languages_to_filter: app_config.user_native_languages})" class="cryistals-more">
+                    <div class="cryistals-more__text" translate>
+                        more
                     </div>
 
 
@@ -84,13 +84,13 @@
 
                 <div class="cryistals-block__header">
                     <a ui-sref="crystals.play_earn.catalog({source: 'popular'})"
-                       class="cryistals__text cryistals__block-title">
-                        Popular
+                       class="cryistals__text cryistals__block-title" translate>
+                        popular
                     </a>
 
                     <a ui-sref="crystals.play_earn.catalog({source: 'popular'})" class="cryistals-more">
-                        <div class="cryistals-more__text">
-                            More
+                        <div class="cryistals-more__text" translate>
+                            more
                         </div>
 
 
@@ -122,13 +122,13 @@
 
                 <div class="cryistals-block__header">
                     <a ui-sref="crystals.play_earn.catalog({source: 'new'})"
-                       class="cryistals__text cryistals__block-title">
-                        New
+                       class="cryistals__text cryistals__block-title" translate>
+                        new
                     </a>
 
                     <a ui-sref="crystals.play_earn.catalog({source: 'new'})" class="cryistals-more">
-                        <div class="cryistals-more__text">
-                            More
+                        <div class="cryistals-more__text" translate>
+                            more
                         </div>
 
 
@@ -157,13 +157,13 @@
             <div class="cryistals-block">
 
                             <div class="cryistals-block__header">
-                                <a ui-sref="crystals.play_earn.catalog({source: 'music', search_results_title: 'MUSIC'})"
-                                   class="cryistals__text cryistals__block-title">
-                                    Music
+                                <a ui-sref="crystals.play_earn.catalog({source: 'music', search_results_title: 'music'})"
+                                   class="cryistals__text cryistals__block-title" translate>
+                                    music
                                 </a>
-                                <a ui-sref="crystals.play_earn.catalog({source: 'music', search_results_title: 'MUSIC'})" class="cryistals-more">
-                                    <div class="cryistals-more__text">
-                                        More
+                                <a ui-sref="crystals.play_earn.catalog({source: 'music', search_results_title: 'music'})" class="cryistals-more">
+                                    <div class="cryistals-more__text" translate>
+                                        more
                                     </div>
                                 </a>
                             </div>
@@ -180,13 +180,13 @@
                         <div class="cryistals-block">
 
                             <div class="cryistals-block__header">
-                                <a ui-sref="crystals.play_earn.catalog({source: 'trivia', preset: false, search_results_title: 'TRIVIA'})"
-                                   class="cryistals__text cryistals__block-title">
-                                    Trivia
+                                <a ui-sref="crystals.play_earn.catalog({source: 'trivia', preset: false, search_results_title: 'trivia'})"
+                                   class="cryistals__text cryistals__block-title" translate>
+                                    trivia
                                 </a>
-                                <a ui-sref="crystals.play_earn.catalog({source: 'trivia', preset: false, search_results_title: 'TRIVIA'})" class="cryistals-more">
-                                    <div class="cryistals-more__text">
-                                        More
+                                <a ui-sref="crystals.play_earn.catalog({source: 'trivia', preset: false, search_results_title: 'trivia'})" class="cryistals-more">
+                                    <div class="cryistals-more__text" translate>
+                                        more
                                     </div>
                                 </a>
                             </div>
@@ -203,13 +203,13 @@
                         <div class="cryistals-block">
 
                             <div class="cryistals-block__header">
-                                <a ui-sref="crystals.play_earn.catalog({source: 'movie', preset: false, search_results_title: 'MOVIES'})"
-                                   class="cryistals__text cryistals__block-title">
-                                    Movies
+                                <a ui-sref="crystals.play_earn.catalog({source: 'movie', preset: false, search_results_title: 'movies'})"
+                                   class="cryistals__text cryistals__block-title" translate>
+                                    movies
                                 </a>
-                                <a ui-sref="crystals.play_earn.catalog({source: 'movie', preset: false, search_results_title: 'MOVIES'})" class="cryistals-more">
-                                    <div class="cryistals-more__text">
-                                        More
+                                <a ui-sref="crystals.play_earn.catalog({source: 'movie', preset: false, search_results_title: 'movies'})" class="cryistals-more">
+                                    <div class="cryistals-more__text" translate>
+                                        more
                                     </div>
                                 </a>
                             </div>
@@ -226,13 +226,13 @@
                         <div class="cryistals-block">
 
                             <div class="cryistals-block__header">
-                                <a ui-sref="crystals.play_earn.catalog({source: 'cartoons', preset: false, search_results_title: 'CARTOONS'})"
-                                   class="cryistals__text cryistals__block-title">
-                                    Cartoons
+                                <a ui-sref="crystals.play_earn.catalog({source: 'cartoons', preset: false, search_results_title: 'cartoons'})"
+                                   class="cryistals__text cryistals__block-title" translate>
+                                    cartoons
                                 </a>
-                                <a ui-sref="crystals.play_earn.catalog({source: 'cartoons', preset: false, search_results_title: 'CARTOONS'})" class="cryistals-more">
-                                    <div class="cryistals-more__text">
-                                        More
+                                <a ui-sref="crystals.play_earn.catalog({source: 'cartoons', preset: false, search_results_title: 'cartoons'})" class="cryistals-more">
+                                    <div class="cryistals-more__text" translate>
+                                        more
                                     </div>
                                 </a>
                             </div>
@@ -249,13 +249,13 @@
                         <div class="cryistals-block">
 
                             <div class="cryistals-block__header">
-                                <a ui-sref="crystals.play_earn.catalog({source: 'anime', preset: false, search_results_title: 'ANIME'})"
-                                   class="cryistals__text cryistals__block-title">
-                                    Anime
+                                <a ui-sref="crystals.play_earn.catalog({source: 'anime', preset: false, search_results_title: 'anime'})"
+                                   class="cryistals__text cryistals__block-title" translate>
+                                    anime
                                 </a>
-                                <a ui-sref="crystals.play_earn.catalog({source: 'anime', preset: false, search_results_title: 'ANIME'})" class="cryistals-more">
-                                    <div class="cryistals-more__text">
-                                        More
+                                <a ui-sref="crystals.play_earn.catalog({source: 'anime', preset: false, search_results_title: 'anime'})" class="cryistals-more">
+                                    <div class="cryistals-more__text" translate>
+                                        more
                                     </div>
                                 </a>
                             </div>
