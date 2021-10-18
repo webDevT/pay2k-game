@@ -8,3 +8,10 @@
 2021/10/12 15:44:35 [notice] 7852#16336: create thread 16504
 2021/10/12 15:44:35 [notice] 7852#16336: create thread 14960
 2021/10/12 15:44:35 [notice] 7852#16336: create thread 11704
+2021/10/18 19:50:18 [notice] 4020#3188: using the "select" event method
+2021/10/18 19:50:18 [notice] 4020#3188: nginx/1.19.6
+2021/10/18 19:50:18 [info] 4020#3188: OS: 260200 build:9200, "", suite:300, type:1
+2021/10/18 19:50:18 [notice] 4020#3188: start worker processes
+2021/10/18 19:50:18 [notice] 4020#3188: start worker process 7964
+2021/10/18 19:50:19 [notice] 7964#352: nginx/1.19.6
+2021/10/18 19:50:19 [info] 7964#352: OS: 260200 build:9200, "", suite:300, type:1

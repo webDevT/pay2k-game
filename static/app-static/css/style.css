@@ -1147,6 +1147,9 @@ h2.text-center.ng-scope {
         font-weight: 700;
 
     }
+    .img-game-container img {
+        max-width: 80%;
+    }
 
 }
 
@@ -1194,6 +1197,9 @@ h2.text-center.ng-scope {
         width: 9vw;
         height: 9vw;
         background-size: 9vw 9vw;
+    }
+    .img-game-container img {
+        max-width: 75%;
     }
 
 }
